@@ -1,0 +1,39 @@
+﻿<html>
+<head>  
+<style type="text/css">
+body{
+        background-color:aqua;
+        
+     }
+</style>
+</head>
+<body>
+<h1 align="center">JAVA TASKS 3.1</h1>
+<h1 id="heading"></h1>
+
+<input type="text" id="myinput" value="" onchange="displaytext()" />
+<form>
+    <input type="checkbox" id="team1" name="team" value="Bike">I am from team 1<br></br>
+    <input type="checkbox" id="team2" name="team" value="Car">I am from team 2<br></br> 
+    <input type="checkbox" id="team3" name="team" value="Scooter">Iam from team 3<br></br>
+    <input type="submit" value="   Print   " size="30" onClick="return checkbox();">
+</form>
+<script type="text/javascript">
+function displaytext(){
+    var inputelem = document.getElementById('myinput');
+    var elem = document.getElementById('heading');
+    elem.innerHTML = inputelem.value;
+}
+function checkbox()
+{
+    var team1=document.getElementById("team1").checked;
+    var team2=document.getElementById("team2").checked;
+    var team3=document.getElementById("team3").checked;
+    if(team1) document.writeln(" I am from team 1");
+    if(team2) document.write(" I am from team 2"); 
+    if(team3) document.writeln(" I am from team 3");  
+return false;  
+}  
+</script>
+</body>
+</html>
